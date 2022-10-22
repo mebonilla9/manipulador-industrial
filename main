@@ -1,0 +1,108 @@
+#include <Servo.h>
+
+Servo servo1;
+Servo servo2;
+Servo servo3;
+Servo servo4;
+
+int X=90;
+int Y=70;
+int Z=100;
+int W=90;
+
+void setup() {
+  servo1.attach(3);//base
+  servo2.attach(4);//derecha
+  servo3.attach(5);//izquierda
+  servo4.attach(6);
+  servo1.write(0);
+  servo2.write(Y);
+  servo3.write(Z);
+  servo4.write(0);
+}
+
+void loop() {//base avance
+delay(500);  
+for (int y1 = Y; y1 >= 0; y1--)
+  {
+    servo2.write(y1);
+    delay(25);
+  }
+delay(500);
+for (int w = 0; w <= W; w++)
+  {
+    servo4.write(w);
+    delay(25);
+  }
+delay(500);
+for (int y = 0; y <= Y; y++)
+  {
+    servo2.write(y);
+    delay(25);
+  }
+delay(500);
+for (int z1 = Z; z1 >= 0; z1--)
+  {
+    servo3.write(z1);
+    delay(25);
+  }
+delay(500);
+for (int x = 0; x <= X; x++)
+  {
+    servo1.write(x);
+    delay
+    (25);
+  }
+
+for (int y3 = Y; y3 >= 0; y3--){
+  
+    servo2.write(y3);
+    delay(25);
+  }
+
+delay(500);
+for (int z1 = 0; z1 <= Z; z1++){
+  
+    servo3.write(z1);
+    delay(25);
+  }
+delay(500); 
+delay(500);
+for (int y4 = 0; y4 <= Y; y4++){
+  
+    servo2.write(y4);
+    delay(25);
+  } 
+
+for (int w1 = W; w1 >= 0; w1--){
+  
+    servo4.write(w1);
+    delay(25);
+  }
+
+delay(500);  
+// -------------------------------------------------------------//  
+
+  delay(500);  
+for (int y = 0; y <= Y; y++)
+  {
+    servo2.write(y);
+    delay(25);
+  }
+delay(500);
+for (int z1 = Z; z1 >= 0; z1--)
+  {
+    servo3.write(z1);
+    delay(25);
+  }
+delay(500);
+delay(500);
+// -------------------------------------------------------------//  
+
+for (int x1 = X; x1 >= 0; x1--){
+  
+    servo1.write(x1);
+    delay(25);
+  }
+exit(0);
+}
